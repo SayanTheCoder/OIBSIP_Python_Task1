@@ -72,10 +72,10 @@ The assistant will open Google and search for `Python programming`.
 
 text
 VOICE ASSISTANT/
-├── voice_assistant.py    Main Python program
-├── requirements.txt      Python dependencies
-├── .gitignore            Files ignored by Git
-└── README.md             Project documentation
+-->voice_assistant.py   Main Python program
+-->requirements.txt     Python dependencies
+-->.gitignore           Files ignored by Git
+-->README.md            Project documentation
 
 
 ⚙️ How It Works
