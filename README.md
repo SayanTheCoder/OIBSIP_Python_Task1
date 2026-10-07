@@ -42,13 +42,13 @@ A working microphone is required because the application listens for voice comma
 
 1. Clone the repository
 
-Replace `YOUR-USERNAME` with the GitHub username that owns the repository:
+Clone the repository:
 
-git clone https://github.com/YOUR-USERNAME/Sayan-Voice-Assistant.git
+git clone https://github.com/SayanTheCoder/OIBSIP_Python_Task1.git
 
 2. Open the project folder
 
-cd "Sayan-Voice-Assistant/VOICE ASSISTANT"
+cd "OIBSIP_Python_Task1/VOICE ASSISTANT"
 
 3. Install dependencies
 
