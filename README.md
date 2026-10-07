@@ -62,13 +62,12 @@ Example
 
 Say:
 
-text
 Search for Python programming
-
 
 The assistant will open Google and search for `Python programming`.
 
 📂 Project Structure
+
 
 VOICE ASSISTANT/
 ├── voice_assistant.py    Main Python program
@@ -80,6 +79,7 @@ VOICE ASSISTANT/
 ⚙️ How It Works
 
 The assistant follows a simple process:
+
 
 Microphone
     ↓
@@ -96,7 +96,7 @@ Generate Response
 Text-to-Speech
     ↓
 Speaker
-```
+
 
 🔮 Future Improvements
 
