@@ -2,6 +2,7 @@ import speech_recognition
 import pyttsx3
 import datetime
 import webbrowser
+from urllib.parse import quote_plus
 
 recognizer = speech_recognition.Recognizer()
 
@@ -48,11 +49,53 @@ with speech_recognition.Microphone() as mic:
                 webbrowser.open("https://www.youtube.com")
                 response = "Opening YouTube"
 
+            elif text == "open wikipedia":
+                webbrowser.open("https://www.wikipedia.org")
+                response = "Opening Wikipedia"
+
+            elif (
+                text.startswith("search youtube for")
+                or text.startswith("search on youtube for")
+                or (text.startswith("search for") and text.endswith(" on youtube"))
+            ):
+                if text.startswith("search youtube for"):
+                    search_query = text[len("search youtube for"):].strip()
+                elif text.startswith("search on youtube for"):
+                    search_query = text[len("search on youtube for"):].strip()
+                else:
+                    search_query = text[len("search for"):-len(" on youtube")].strip()
+
+                if search_query:
+                    url = "https://www.youtube.com/results?search_query=" + quote_plus(search_query)
+                    webbrowser.open(url)
+                    response = "Searching YouTube for " + search_query
+                else:
+                    response = "What would you like me to search for on YouTube?"
+
+            elif (
+                text.startswith("search wikipedia for")
+                or text.startswith("search on wikipedia for")
+                or (text.startswith("search for") and text.endswith(" on wikipedia"))
+            ):
+                if text.startswith("search wikipedia for"):
+                    search_query = text[len("search wikipedia for"):].strip()
+                elif text.startswith("search on wikipedia for"):
+                    search_query = text[len("search on wikipedia for"):].strip()
+                else:
+                    search_query = text[len("search for"):-len(" on wikipedia")].strip()
+
+                if search_query:
+                    url = "https://en.wikipedia.org/w/index.php?search=" + quote_plus(search_query)
+                    webbrowser.open(url)
+                    response = "Searching Wikipedia for " + search_query
+                else:
+                    response = "What would you like me to search for on Wikipedia?"
+
             elif text.startswith("search for"):
                 search_query = text.replace("search for", "").strip()
 
                 if search_query:
-                    url = "https://www.google.com/search?q=" + search_query
+                    url = "https://www.google.com/search?q=" + quote_plus(search_query)
                     webbrowser.open(url)
                     response = "Searching for " + search_query
                 else:

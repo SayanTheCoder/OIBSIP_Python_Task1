@@ -12,7 +12,10 @@ The assistant can recognize spoken commands, provide the current date and time, 
 * 📅 Current date information
 * 🌐 Open Google using voice commands
 * ▶️ Open YouTube using voice commands
+* 📚 Open Wikipedia using voice commands
 * 🔎 Perform Google searches
+* ▶️ Search YouTube by voice
+* 📚 Search Wikipedia by voice
 * 👋 Basic greeting and conversational responses
 * ❌ Exit the assistant using a voice command
 * ⚠️ Error handling for unrecognized speech
@@ -75,9 +78,11 @@ After starting the assistant, speak a command such as:
 
 ```text
 Search for Python programming
+Search YouTube for Python programming
+Search Wikipedia for Python programming
 ```
 
-The assistant will recognize the command and open Google with the requested search.
+The first command opens Google search results. The YouTube and Wikipedia commands open search results on their respective sites.
 
 Other example commands include:
 
@@ -86,6 +91,9 @@ What is the time?
 What is today's date?
 Open Google
 Open YouTube
+Open Wikipedia
+Search for funny cat videos on YouTube
+Search Wikipedia for Ada Lovelace
 Hello
 Exit
 ```
