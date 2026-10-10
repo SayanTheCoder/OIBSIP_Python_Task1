@@ -38,9 +38,6 @@ with speech_recognition.Microphone() as mic:
                 today = datetime.datetime.now()
                 response = "Today's date is " + today.strftime("%d-%m-%Y")
 
-            elif text == "hello":
-                response = "Welcome to Sayan's Voice Assistant"
-
             elif text == "open google":
                 webbrowser.open("https://www.google.com")
                 response = "Opening Google"
