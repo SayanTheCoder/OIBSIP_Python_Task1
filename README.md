@@ -1,4 +1,4 @@
-# 🎙️ Sayan's Voice Assistant
+# 🎙️ Sayan Voice Assistant
 
 A simple and interactive **Python-based Voice Assistant** that uses speech recognition and text-to-speech technology to interact with users through voice commands.
 

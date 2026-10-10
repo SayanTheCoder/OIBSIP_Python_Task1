@@ -18,7 +18,7 @@ def speak(text):
 with speech_recognition.Microphone() as mic:
     recognizer.adjust_for_ambient_noise(mic, duration=0.2)
 
-    speak("Hello! Welcome to Sayan's Voice Assistant")
+    speak("Hello! Welcome to Sayan Voice Assistant")
 
     while True:
         try:
